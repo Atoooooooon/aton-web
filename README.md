@@ -1,20 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aton Website
+
+A modern Next.js website with Zustand state management and SWR for data fetching.
+
+## Project Structure
+
+```
+├── app/                    # Next.js 13+ App Router
+│   ├── (auth)/            # Authentication related routes
+│   ├── (dashboard)/       # Dashboard related routes
+│   ├── api/               # API routes
+│   └── layout.tsx         # Root layout
+├── components/            # React Components
+│   ├── ui/               # UI components (buttons, inputs, etc.)
+│   └── shared/           # Shared components
+├── lib/                   # Utility functions and configurations
+│   ├── axios.ts          # Axios instance and interceptors
+│   └── swr.ts            # SWR configurations
+├── stores/               # Zustand stores
+│   ├── auth.ts           # Authentication store
+│   └── theme.ts          # Theme store
+├── types/                # TypeScript type definitions
+├── hooks/               # Custom React hooks
+│   ├── api/             # API related hooks
+│   └── store/           # Store related hooks
+├── styles/              # Global styles
+└── utils/               # Helper functions
+```
+
+## Tech Stack
+
+- Next.js 13+ (App Router)
+- TypeScript
+- Zustand (State Management)
+- SWR + Axios (Data Fetching)
+- Tailwind CSS (Styling)
 
 ## Getting Started
 
-First, run the development server:
-
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server:
+```bash
+pnpm dev
+```
+
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 

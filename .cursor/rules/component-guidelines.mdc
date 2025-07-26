@@ -1,0 +1,35 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Component Guidelines
+
+## Directory Structure
+
+Components are organized in the following directories:
+- [components/ui/](mdc:components/ui/) - Reusable UI components (buttons, inputs, etc.)
+- [components/shared/](mdc:components/shared/) - Shared components used across multiple pages
+
+## Component Configuration
+
+The project uses shadcn/ui components configured in [components.json](mdc:components.json):
+- Style: New York
+- Base Color: Neutral
+- Icon Library: Lucide
+- CSS Variables: Enabled
+
+## Best Practices
+
+1. Component Organization:
+   - UI components should be atomic and reusable
+   - Shared components should be composable from UI components
+   - Each component should have its own directory with index.ts export
+
+2. Component Imports:
+   - Use aliases defined in [components.json](mdc:components.json):
+     - @/components for general components
+     - @/components/ui for UI components
+     - @/lib for utilities
+     - @/hooks for custom hooks
+

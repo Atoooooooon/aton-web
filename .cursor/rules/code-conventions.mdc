@@ -1,0 +1,35 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Code Conventions
+
+## TypeScript
+
+- All new files should be written in TypeScript
+- Use interfaces for type definitions in [types/](mdc:types/) directory
+- Example type definition: [types/user.ts](mdc:types/user.ts)
+
+## API Integration
+
+### Custom Hooks
+- API hooks should be placed in [hooks/api/](mdc:hooks/api/) directory
+- Follow the pattern in [hooks/api/useUser.ts](mdc:hooks/api/useUser.ts):
+  - Use SWR for data fetching
+  - Return { data, isLoading, isError, mutate } pattern
+  - Type all responses using interfaces from [types/](mdc:types/)
+
+### Axios Configuration
+- All API calls should use the configured axios instance from [lib/axios.ts](mdc:lib/axios.ts)
+- Authentication tokens are automatically handled by axios interceptors
+
+## State Management
+
+### Zustand Stores
+- Each store should be in its own file in [stores/](mdc:stores/) directory
+- Follow the pattern in [stores/auth.ts](mdc:stores/auth.ts):
+  - Use TypeScript interfaces for store state
+  - Use persist middleware when state needs to persist
+  - Export a hook using create() from zustand
+

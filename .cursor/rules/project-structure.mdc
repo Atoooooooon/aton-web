@@ -1,0 +1,36 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Project Structure Guide
+
+This Next.js project follows a modular architecture with clear separation of concerns. Here are the key directories and their purposes:
+
+## Core Directories
+
+- [app/](mdc:app/) - Next.js App Router directory containing all pages and API routes
+- [components/](mdc:components/) - Reusable React components
+- [lib/](mdc:lib/) - Core utilities and configurations
+- [stores/](mdc:stores/) - Zustand state management stores
+- [hooks/](mdc:hooks/) - Custom React hooks
+- [types/](mdc:types/) - TypeScript type definitions
+
+## Key Configuration Files
+
+- [lib/axios.ts](mdc:lib/axios.ts) - Axios instance configuration with interceptors
+- [lib/swr.ts](mdc:lib/swr.ts) - SWR configuration for data fetching
+- [components.json](mdc:components.json) - UI component configuration
+
+## State Management
+
+The project uses Zustand for state management. Key stores:
+- [stores/auth.ts](mdc:stores/auth.ts) - Authentication state management
+
+## API Integration
+
+API integration is handled through:
+- Axios for HTTP requests - configured in [lib/axios.ts](mdc:lib/axios.ts)
+- SWR for data fetching - configured in [lib/swr.ts](mdc:lib/swr.ts)
+- Custom hooks in [hooks/api/](mdc:hooks/api/) directory
+
